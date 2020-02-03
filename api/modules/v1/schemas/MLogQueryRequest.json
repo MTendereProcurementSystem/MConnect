@@ -1,0 +1,44 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "legal_basis",
+    "event_time_from",
+    "event_time_to"
+  ],
+  "properties": {
+    "legal_basis": {
+      "$id": "#/properties/legal_basis",
+      "type": "string",
+      "title": "The Legal_basis Schema",
+      "default": "",
+      "examples": [
+        "Legal base for search"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "event_time_from": {
+      "$id": "#/properties/event_time_from",
+      "type": "string",
+      "title": "The Event_time_from Schema",
+      "default": "",
+      "examples": [
+        "Start time for period to search"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "event_time_to": {
+      "$id": "#/properties/event_time_to",
+      "type": "string",
+      "title": "The Event_time_to Schema",
+      "default": "",
+      "examples": [
+        "End time for period to search"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

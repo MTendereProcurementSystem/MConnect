@@ -1,0 +1,50 @@
+2018-07-10 09:34:26 [::1][-][-][error][ReflectionException] ReflectionException: Class app\modules\v1\Module does not exist in /var/www/mconnect/vendor/yiisoft/yii2/di/Container.php:428
+Stack trace:
+#0 /var/www/mconnect/vendor/yiisoft/yii2/di/Container.php(428): ReflectionClass->__construct('app\\modules\\v1\\...')
+#1 /var/www/mconnect/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('app\\modules\\v1\\...')
+#2 /var/www/mconnect/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('app\\modules\\v1\\...', Array, Array)
+#3 /var/www/mconnect/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('app\\modules\\v1\\...', Array, Array)
+#4 /var/www/mconnect/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#5 /var/www/mconnect/vendor/yiisoft/yii2/base/Module.php(586): yii\base\Module->getModule('v1')
+#6 /var/www/mconnect/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('hello')
+#7 /var/www/mconnect/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/hello', Array)
+#8 /var/www/mconnect/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/mconnect/api/web/index.php(12): yii\base\Application->run()
+#10 {main}
+2018-07-10 09:34:26 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => 'PHPSTORM'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/mconnect/api/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '44998'
+    'SERVER_SOFTWARE' => 'PHP 7.2.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/hello'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/mconnect/api/web/index.php'
+    'PATH_INFO' => '/v1/hello'
+    'PHP_SELF' => '/index.php/v1/hello'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.51'
+    'HTTP_DNT' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=PHPSTORM'
+    'REQUEST_TIME_FLOAT' => 1531215266.5418
+    'REQUEST_TIME' => 1531215266
+]

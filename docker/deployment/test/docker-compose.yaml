@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    image: "git.bts.md:8888/crypt/mt2-mconnect:test"
+    restart: always
+    environment:
+      AP_DB_URL: postgres
+      AP_DB_NAME: mconnect
+      AP_DB_USER: postgres
+      AP_DB_PASS: 123qweASD
+    ports:
+      - 80:80
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123qweASD

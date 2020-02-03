@@ -1,0 +1,64 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.11.0 (39ad614)
+  creationTimestamp: null
+  namespace: developer
+  labels:
+    io.kompose.service: mconnect
+    app: ENV_CI_ENVIRONMENT_SLUG
+  name: mconnect
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: mconnect
+        app: ENV_CI_ENVIRONMENT_SLUG
+    spec:
+      containers:
+      - image: git.bts.md:8888/prj/mt2-mconnect:latest
+        env:
+          - name: AP_DB_NAME
+            value: mconnect
+          - name: AP_DB_PASS
+            value: 123qweASD
+          - name: AP_DB_URL
+            value: 127.0.0.1
+          - name: AP_DB_USER
+            value: postgres
+        name: mconnect
+        ports:
+        - containerPort: 80
+        resources: {}
+      - env:
+          - name: POSTGRES_PASSWORD
+            value: 123qweASD
+        image: postgres:11
+        name: mconnect-db
+        ports:
+          - containerPort: 5432
+        readinessProbe:
+          httpGet:
+            path: /api/v1/docs
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources: {}
+#        volumeMounts:
+#          - mountPath: /var/lib/postgresql/data
+#            subPath: data
+#            name: asterisk
+#      volumes:
+#        - name: asterisk
+#          persistentVolumeClaim:
+#            claimName: asterisk
+      imagePullSecrets:
+      - name: gitsecret
+      restartPolicy: Always
+
+status: {}

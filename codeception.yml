@@ -1,0 +1,6 @@
+include:
+    - api
+    - api/modules/*
+paths:
+
+    log: logs

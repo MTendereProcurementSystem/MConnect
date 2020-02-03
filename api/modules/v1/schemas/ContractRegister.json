@@ -1,0 +1,316 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "header",
+    "benef",
+    "details"
+  ],
+  "properties": {
+    "header": {
+      "$id": "#/properties/header",
+      "type": "object",
+      "title": "The Header Schema",
+      "required": [
+        "id_dok",
+        "nr_dok",
+        "da_dok",
+        "suma",
+        "kd_val",
+        "pkd_fisk",
+        "pkd_sdiv",
+        "pname",
+        "bkd_fisk",
+        "bkd_sdiv",
+        "bname",
+        "desc",
+        "reg_nom",
+        "achiz_nom",
+        "achiz_date",
+        "avans",
+        "da_expire",
+        "c_link"
+      ],
+      "properties": {
+        "id_dok": {
+          "$id": "#/properties/header/properties/id_dok",
+          "type": "string",
+          "title": "The Id_dok Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "nr_dok": {
+          "$id": "#/properties/header/properties/nr_dok",
+          "type": "string",
+          "title": "The Nr_dok Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "da_dok": {
+          "$id": "#/properties/header/properties/da_dok",
+          "type": "string",
+          "title": "The Da_dok Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "suma": {
+          "$id": "#/properties/header/properties/suma",
+          "type": "number",
+          "title": "The Suma Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "kd_val": {
+          "$id": "#/properties/header/properties/kd_val",
+          "type": "string",
+          "title": "The Kd_val Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pkd_fisk": {
+          "$id": "#/properties/header/properties/pkd_fisk",
+          "type": "string",
+          "title": "The Pkd_fisk Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pkd_sdiv": {
+          "$id": "#/properties/header/properties/pkd_sdiv",
+          "type": "string",
+          "title": "The Pkd_sdiv Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pname": {
+          "$id": "#/properties/header/properties/pname",
+          "type": "string",
+          "title": "The Pname Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "bkd_fisk": {
+          "$id": "#/properties/header/properties/bkd_fisk",
+          "type": "string",
+          "title": "The Bkd_fisk Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "bkd_sdiv": {
+          "$id": "#/properties/header/properties/bkd_sdiv",
+          "type": "string",
+          "title": "The Bkd_sdiv Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "bname": {
+          "$id": "#/properties/header/properties/bname",
+          "type": "string",
+          "title": "The Bname Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "desc": {
+          "$id": "#/properties/header/properties/desc",
+          "type": "string",
+          "title": "The Desc Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "reg_nom": {
+          "$id": "#/properties/header/properties/reg_nom",
+          "type": "string",
+          "title": "The Reg_nom Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "achiz_nom": {
+          "$id": "#/properties/header/properties/achiz_nom",
+          "type": "string",
+          "title": "The Achiz_nom Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "achiz_date": {
+          "$id": "#/properties/header/properties/achiz_date",
+          "type": "string",
+          "title": "The Achiz_date Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "avans": {
+          "$id": "#/properties/header/properties/avans",
+          "type": "number",
+          "title": "The Avans Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "da_expire": {
+          "$id": "#/properties/header/properties/da_expire",
+          "type": "string",
+          "title": "The Da_expire Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "c_link": {
+          "$id": "#/properties/header/properties/c_link",
+          "type": "string",
+          "title": "The C_link Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "benef": {
+      "$id": "#/properties/benef",
+      "type": "object",
+      "title": "The Benef Schema",
+      "required": [
+        "id_dok",
+        "bbic",
+        "biban"
+      ],
+      "properties": {
+        "id_dok": {
+          "$id": "#/properties/benef/properties/id_dok",
+          "type": "string",
+          "title": "The Id_dok Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "bbic": {
+          "$id": "#/properties/benef/properties/bbic",
+          "type": "string",
+          "title": "The Bbic Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "biban": {
+          "$id": "#/properties/benef/properties/biban",
+          "type": "number",
+          "title": "The Biban Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "details": {
+      "$id": "#/properties/details",
+      "type": "object",
+      "title": "The Details Schema",
+      "required": [
+        "id_dok",
+        "suma",
+        "piban",
+        "byear"
+      ],
+      "properties": {
+        "id_dok": {
+          "$id": "#/properties/details/properties/id_dok",
+          "type": "string",
+          "title": "The Id_dok Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "suma": {
+          "$id": "#/properties/details/properties/suma",
+          "type": "number",
+          "title": "The Suma Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "piban": {
+          "$id": "#/properties/details/properties/piban",
+          "type": "string",
+          "title": "The Piban Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "byear": {
+          "$id": "#/properties/details/properties/byear",
+          "type": "number",
+          "title": "The Byear Schema",
+          "default": "",
+          "examples": [
+            "?"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}
